@@ -3,7 +3,7 @@ import express, { Request, Response } from "express";
 const app = express();
 const port = 3000;
 
-const csvPath: string = " /home/ubuntu/CrawlerBackEnd/src/data/kamperologia_produkty_sku.csv";
+const csvPath: string = "/home/ubuntu/CrawlerBackEnd/src/data/kamperologia_produkty_sku.csv";
 
 app.get("/checkProduct/:productCode", (req: Request, res: Response) => {
 	const { productCode } = req.params;
