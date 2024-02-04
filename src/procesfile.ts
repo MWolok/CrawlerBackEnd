@@ -4,7 +4,7 @@ function processCSVFile(filePath: string): void {
     try {
         const fileData: string = fs.readFileSync(filePath, "utf8");
 
-        // Log the value of fileData to check if it's undefined or null
+        
         console.log("File Data:", fileData);
 
         const rows: string[] = fileData.split("\n");
@@ -25,7 +25,7 @@ function processCSVFile(filePath: string): void {
         for (let i = 1; i < rows.length; i++) {
             const rowData: string[] = rows[i].replace(/"/g, "").split(";").map((value) => value.trim());
 
-            // Ensure the row has the expected number of columns
+           
             if (rowData.length >= productCodeIndex + 1) {
                 const originalProductCode = rowData[productCodeIndex];
                 const sanitizedProductCode = removeSlashOnce(originalProductCode);
